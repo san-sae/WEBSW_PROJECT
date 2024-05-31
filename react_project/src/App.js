@@ -1,21 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
-import Home from './pages/Home';
-import BookList from './pages/BookList';
-import Review from './pages/Review';
-import Info from './pages/Info';
-import MyPage from './pages/MyPage';
-import Question from './pages/Question';
-import LogIn from './pages/LogIn';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
+import Signin from "./pages/Signin";
+import Login from "./pages/Login";
+import Main from "./pages/Main";
+import Booklist from "./pages/Booklist"
+import Infopage from "./pages/Infopage"
+import Mypage from "./pages/Mypage"
 
 function App() {
   return (
-    <div className="App">
-      <main>
-        <Review />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/booklist" element={<Booklist />} />
+        <Route path="/infopage" element={<Infopage />} />
+        <Route path="/mypage" element={<Mypage />} />
+      </Routes>
+    </BrowserRouter> 
   );
 }
 
