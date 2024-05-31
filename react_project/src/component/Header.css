@@ -1,0 +1,25 @@
+.head {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  height: 100px;
+  width: 100%;
+}
+
+.m {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}
+
+.logout {
+  color: #112D4E;
+  font-size: 15px;
+  position: absolute;
+  top: 15px;
+  right: 200px;
+  
+}
