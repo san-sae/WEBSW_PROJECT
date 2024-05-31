@@ -38,7 +38,7 @@ const LogIn = () => {
         console.log('Password:', password2);
 
 
-        navigate("/main");
+        navigate("/home");
     };
 
     const navigate = useNavigate();
