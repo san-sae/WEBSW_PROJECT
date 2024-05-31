@@ -1,0 +1,77 @@
+.row {
+  position: absolute;
+  top: 205px;
+  left: 0px;
+  right: 0px;
+  height: 400px;
+  width:100%;
+  background-color: #3F72AF;
+}
+
+.n {
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  font-size: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #1755a1;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-next {
+  color: white;
+
+}
+
+.swiper-button-prev {
+  color: white;
+}
+
+.bookslide {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+}
+
+.book {
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 50px;
+  
+}
+
+.bookname {
+  color: #DBE2EF;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.author {
+  color: #DBE2EF;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+.intro {
+  color: #DBE2EF;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 50%;
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto; /* 이미지가 부모 요소 안에서 가운데로 정렬되도록 설정 */
+}

@@ -8,6 +8,7 @@ import LogIn from "./pages/LogIn"
 import MyPage from "./pages/MyPage"
 import Question from "./pages/Question"
 import Review from "./pages/Review"
+import Signin from "./pages/Signin"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/question" element={<Question />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/signin" element={<Signin />} />
       </Routes>
     </BrowserRouter> 
   );
