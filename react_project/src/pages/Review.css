@@ -1,0 +1,54 @@
+.review-page{
+    width: 800px;
+
+}
+.review-name {
+    border: 2px solid pink;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .review-group {
+    border: 2px solid green;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .review-eval {
+    margin: 10px 30px;
+    border: 2px solid red;
+  }
+
+  .review-level {
+    margin: 10px 30px;
+    border: 2px solid blue;
+  }
+
+  .review-complete {
+    margin: 10px 30px;
+    border: 2px solid violet;
+  }
+  
+  .review-content {
+    border: 2px solid yellowgreen;
+    margin: 20px;
+  }
+  .review-content textarea {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin: 20px;
+  }
+  
+  .submit-btn {
+    height: 40px;
+    border: 2px solid rgb(205, 50, 153);
+    margin: 20px;
+  }
