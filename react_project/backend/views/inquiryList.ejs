@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의 목록</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">독립출판사란?</a></li>
+                <li><a href="/contact">1 : 1 문의</a></li>
+                <li><a href="/contact/list">문의 목록</a></li>
+            </ul>
+        </nav>
+        <h1>문의 목록</h1>
+        <% if (inquiries.length > 0) { %>
+            <ul>
+                <% inquiries.forEach(function(inquiry) { %>
+                    <li>
+                        <strong>날짜:</strong> <%= new Date(inquiry.date).toLocaleString() %><br>
+                        <!-- <strong>닉네임:</strong> <%= inquiry.nickname %><br> -->
+                        <!-- <strong>메일주소:</strong> <%= inquiry.mail %><br> -->
+                        <strong>제목:</strong> <%= inquiry.subject %><br>
+                        <strong>문의 내용:</strong> <%= inquiry.question %><br>
+                        <br>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>문의 내역이 없습니다.</p>
+        <% } %>
+    </div>
+</body>
+</html>
