@@ -1,23 +1,25 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import Signin from "./pages/Signin";
-import Login from "./pages/Login";
-import Main from "./pages/Main";
-import Booklist from "./pages/Booklist"
-import Infopage from "./pages/Infopage"
-import Mypage from "./pages/Mypage"
+import BookList from "./pages/BookList.js";
+import Home from "./pages/Home";
+import Info from "./pages/Info";
+import LogIn from "./pages/LogIn"
+import MyPage from "./pages/MyPage"
+import Question from "./pages/Question"
+import Review from "./pages/Review"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/booklist" element={<Booklist />} />
-        <Route path="/infopage" element={<Infopage />} />
-        <Route path="/mypage" element={<Mypage />} />
+        <Route path="/" element={<LogIn />} />
+        <Route path="/booklist" element={<BookList />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/question" element={<Question />} />
+        <Route path="/review" element={<Review />} />
       </Routes>
     </BrowserRouter> 
   );
