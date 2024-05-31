@@ -10,6 +10,7 @@ const Nav = () => {
   const goToSignin = () => {
       navigate("/signin");
       };
+      
 
   return (
     <div className="Nav">
