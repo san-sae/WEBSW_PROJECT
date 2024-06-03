@@ -1,54 +1,89 @@
 .review-page{
-    width: 800px;
-
+  width: 100%;
+  height: 700px;
+  background-color: #EEF7FF;
+  padding: 160px 0px 0px 0px;
 }
+
+.review-form {
+  border: 3px solid rgb(215, 215, 215);
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  margin: 0px auto;
+}
+
+h2 {
+  padding: 10px 40px;
+  color: #112D4E;
+}
+
+select option[value=""][disabled] {
+	display: none;
+}
+
 .review-name {
-    border: 2px solid pink;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 10px;
     display: flex;
+    width: 600px;
     height: 50px;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 30px auto 20px auto;
+    
   }
-  
+
+.name, .date {
+  width: 390px;
+  height: 35px;
+  margin: 20px;
+
+}  
+
   .review-group {
-    border: 2px solid green;
-    padding-left: 10px;
+    border: 2px solid  rgb(177, 177, 177);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
+    width: 600px;
     height: 50px;
     align-items: center;
-    margin: 20px;
+    margin: 30px auto 20px auto;
+
   }
   
-  .review-eval {
-    margin: 10px 30px;
-    border: 2px solid red;
+  select {
+    width: 160px;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    margin: 10px 20px;
   }
 
-  .review-level {
-    margin: 10px 30px;
-    border: 2px solid blue;
-  }
-
-  .review-complete {
-    margin: 10px 30px;
-    border: 2px solid violet;
-  }
-  
-  .review-content {
-    border: 2px solid yellowgreen;
-    margin: 20px;
-  }
-  .review-content textarea {
-    width: 100%;
-    height: 200px;
+  textarea {
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid rgb(177, 177, 177);
     display: flex;
-    margin: 20px;
+    margin: 30px auto 20px auto;
   }
   
-  .submit-btn {
-    height: 40px;
-    border: 2px solid rgb(205, 50, 153);
-    margin: 20px;
-  }
+button {
+  width: 90px;
+  height: 50px;
+  border: none;
+  background-color: #112D4E;
+  font-size: 15px;
+  color: white;
+  margin: 30px auto; /* 수평 가운데 정렬 */
+  display: block; /* 블록 요소로 변경하여 너비를 가득 차게 설정 */
+  border-radius: 10px;
+}
+
+.submit-btn {
+  text-align: center; /* 내부의 인라인 요소들을 수평 가운데 정렬 */
+}
