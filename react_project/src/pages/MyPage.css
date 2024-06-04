@@ -1,0 +1,39 @@
+.display-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.data-group {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-group p {
+    margin: 10px 0;
+}
+
+.backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #45a049;
+}
+
+#main_content{
+    margin-top: 100px;
+}
+
+body{
+    background-color:  #EEF7FF;
+}
