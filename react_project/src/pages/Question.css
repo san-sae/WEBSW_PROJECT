@@ -9,41 +9,17 @@ body {
   /* position: relative; */
   max-width: 800px;
   margin: 150px auto;
+  height: 750px;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-} */
 
 h1, h2, h3 {
   color: #333;
 }
-
-/* 
-p {
-  line-height: 1.6;
-  color: #666;
-} */
 
 form div {
   margin-bottom: 15px;
@@ -63,8 +39,7 @@ input[type="email"]
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-  resize: horizontal; /* Allow vertical resizing only */
+  resize: horizontal; 
 }
 
 textarea {
@@ -73,8 +48,8 @@ textarea {
   height: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-  resize: horizontal; /* Allow vertical resizing only */
+  box-sizing: border-box; 
+  resize: horizontal;
 }
 
 #send_button {
@@ -91,7 +66,3 @@ textarea {
   background-color: #112D42;
 }
 
-/* 
-.list a:visited {
-  color: mediumslateblue;    
-} */
