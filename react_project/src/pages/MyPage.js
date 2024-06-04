@@ -1,8 +1,13 @@
-// MyPage.js
 import React from 'react';
+import Nav from './../component/Nav';
 
-function MyPage() {
-  return <h2>마이페이지</h2>;
-}
+const MyPage = () => {
+  return (
+    <div>
+      <Nav />
+      <h2>마이페이지</h2>
+    </div>
+  );
+};
 
 export default MyPage;
