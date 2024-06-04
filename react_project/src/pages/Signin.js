@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Signin.css'; 
 
@@ -36,6 +37,7 @@ const Signin = () => {
 
         localStorage.setItem('id', id); //
         localStorage.setItem('password', password); //
+        localStorage.setItem('username', username);
 
         console.log(localStorage.getItem('id2'))
         console.log('Username:', username);
