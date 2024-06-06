@@ -3,7 +3,17 @@ import axios from 'axios';
 import './Question.css';
 import Nav from './../component/Nav';
 
+// const MyPage = () => {
+//   const id = localStorage.getItem('id');
+//   const password = localStorage.getItem('password');
+//   const username = localStorage.getItem('username');
+
+// };
+
+
 const ContactForm = () => {
+  const username = localStorage.getItem('username');
+
   const [formData, setFormData] = useState({
     nickname: '',
     mail: '',
@@ -44,8 +54,8 @@ const ContactForm = () => {
       <h1>문의하기</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="nickname">닉네임</label>
-          <input type="text" id="nickname" name="nickname" value={formData.nickname} onChange={handleChange} required />
+          <label htmlFor="nickname">사용자 이름 : {username}</label>
+          {/* <input type="text" id="nickname" name="nickname" value={formData.nickname} onChange={handleChange} required /> */}
         </div>
         <div>
           <label htmlFor="mail">이메일</label>

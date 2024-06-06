@@ -10,7 +10,7 @@ const MyPage = () => {
     const navigate = useNavigate();
 
     const goBack = () => {
-        navigate("/signin");
+        navigate("/Home");
     };
 
     return (
@@ -24,7 +24,7 @@ const MyPage = () => {
                   <p><strong>ID:</strong> {id}</p>
                   <p><strong>비밀번호:</strong> {password}</p>
               </div>
-              <button className="backButton" onClick={goBack}>Go Back</button>
+              <button className="backButton" onClick={goBack}>홈으로</button>
             </div>
         </div>
     );
