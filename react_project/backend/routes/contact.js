@@ -7,7 +7,7 @@ let inquiries = [];
 
 // POST 요청 시 이메일 전송 처리 및 문의 내역 저장
 router.post('/', (req, res) => {
-  const { nickname, mail, subject, question } = req.body;
+  const { mail, subject, question } = req.body;
 
   // SMTP 전송 서버 설정
   const transporter = nodemailer.createTransport({
@@ -23,8 +23,9 @@ router.post('/', (req, res) => {
     from: mail, // 사용자가 입력한 이메일
     to: 'drone0101@naver.com', // 받는 사람 이메일
     subject: subject, // 입력받은 제목
-    text: `닉네임 : ${nickname}\n메일주소 : ${mail}\n문의 내용 : ${question}` // 입력받은 내용
+    text: `메일주소 : ${mail}\n문의 내용 : ${question}` // 입력받은 내용
   };
+  // 닉네임 : ${nickname}\n
 
   // 이메일 보내기
   transporter.sendMail(mailOptions, function(error, info) {
@@ -34,7 +35,7 @@ router.post('/', (req, res) => {
     } else {
       console.log('Email sent: ' + info.response);
       // 문의 내역 저장
-      inquiries.push({ date: new Date(), nickname, mail, subject, question });
+      inquiries.push({ date: new Date(), mail, subject, question });
       res.status(200).json({ message: '문의 내용이 정상적으로 전달되었습니다!' });
     }
   });
