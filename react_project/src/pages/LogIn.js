@@ -51,7 +51,7 @@ const LogIn = () => {
         <div className="LogIn-container">
             <div className="book-container">
                 <h1 className="login-title">BOOKLOG</h1>
-                <p className='login-text'>abcdefghijklmnopqrstuvwxyz</p>
+                <p className='login-text'>독서의 즐거움을 두 배로, 당신의 책 리뷰 플랫폼</p>
             </div>
             <div className="login-container">
                 <form onSubmit={handleSubmit}>
