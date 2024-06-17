@@ -42,40 +42,51 @@
 .bookslide {
   display: flex;
   flex-direction: row;
-  height: 400px;
+  height: 600px;
 }
 
-.book {
-  width: 50%;
+.book1 {
+  width: 350px;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 100px;
-  padding-right: 0px;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+}
+
+.book2 {
+  width: 510px;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 50px;
+  left: 430px;
+  align-items: center;
+  padding-left: 30px;
   
 }
 
-.bookname {
-  font-size: 40px;
-  margin-bottom: 20px;
+.book3 {
+  width: 350px;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  align-items: center;
+  padding-left: 30px;
+  
 }
 
-.author {
+.bookimg{
+  width: 250px;
+}
+
+.bookname{
+  display: flex;
+  padding-top: 50px;
   font-size: 30px;
-  margin-bottom: 20px;
+  
 }
 
-
-
-.intro {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-img {
-  width: 50%;
-  display: block;
-  max-width: 200px;
-  max-height: 200px;
-  margin: auto; /* 이미지가 부모 요소 안에서 가운데로 정렬되도록 설정 */
-}
