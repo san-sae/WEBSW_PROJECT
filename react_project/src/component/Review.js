@@ -146,6 +146,9 @@ const Review = () => {
   const topReviewedBook = sortedBooks[0];
   const secondTopReviewedBook = sortedBooks[1];
   const thirdTopReviewedBook = sortedBooks[2];
+  const fourTopReviewedBook = sortedBooks[3];
+  const fiveTopReviewedBook = sortedBooks[4];
+  const sixTopReviewedBook = sortedBooks[5];
 
   return (
     <div className='row-container'>
@@ -156,38 +159,42 @@ const Review = () => {
         spaceBetween={50}
         slidesPerView={1}
         navigation={{ clickable: true }}>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
+        <SwiperSlide className="bookslide">
+          <div className='book1'>
+          <img className='bookimg' src={topReviewedBook.img} alt={topReviewedBook.name} />
             <div className="bookname">1위       {topReviewedBook.name}</div>
-            <div className="author">{topReviewedBook.author}</div>
-            <div className="intro">
-              {`출판사: ${topReviewedBook.publisher}, 출간일: ${topReviewedBook.date}, 페이지 수: ${topReviewedBook.pages}, 장르: ${topReviewedBook.genre}`}
-            </div>
-            <div className="reviews">리뷰 수: {topReviewedBook.reviews}</div>
+            
           </div>
-          <img src={topReviewedBook.img} alt={topReviewedBook.name} />
-        </SwiperSlide>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
+          <div className='book2'>
+            <img className='bookimg' src={secondTopReviewedBook.img} alt={secondTopReviewedBook.name}/>
             <div className="bookname">2위       {secondTopReviewedBook.name}</div>
-            <div className="author">{secondTopReviewedBook.author}</div>
-            <div className="intro">
-              {`출판사: ${secondTopReviewedBook.publisher}, 출간일: ${secondTopReviewedBook.date}, 페이지 수: ${secondTopReviewedBook.pages}, 장르: ${secondTopReviewedBook.genre}`}
-            </div>
-            <div className="reviews">리뷰 수: {secondTopReviewedBook.reviews}</div>
+            
           </div>
-          <img src={secondTopReviewedBook.img} alt={secondTopReviewedBook.name} />
+          <div className='book3'>
+          <img className='bookimg' src={thirdTopReviewedBook.img} alt={thirdTopReviewedBook.name} />
+            <div className="bookname">3위       {thirdTopReviewedBook.name}</div>
+            
+          </div>
         </SwiperSlide>
         <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">3위       {thirdTopReviewedBook.name}</div>
-            <div className="author">{thirdTopReviewedBook.author}</div>
-            <div className="intro">
-              {`출판사: ${thirdTopReviewedBook.publisher}, 출간일: ${secondTopReviewedBook.date}, 페이지 수: ${secondTopReviewedBook.pages}, 장르: ${secondTopReviewedBook.genre}`}
-            </div>
-            <div className="reviews">리뷰 수: {thirdTopReviewedBook.reviews}</div>
+        <div className='book1'>
+          <img className='bookimg' src={fourTopReviewedBook.img} alt={fourTopReviewedBook.name} />
+            <div className="bookname">4위       {fourTopReviewedBook.name}</div>
+            
           </div>
-          <img src={thirdTopReviewedBook.img} alt={thirdTopReviewedBook.name} />
+          <div className='book2'>
+            <img className='bookimg' src={fiveTopReviewedBook.img} alt={fiveTopReviewedBook.name}/>
+            <div className="bookname">5위       {fiveTopReviewedBook.name}</div>
+            
+          </div>
+          <div className='book3'>
+          <img className='bookimg' src={sixTopReviewedBook.img} alt={sixTopReviewedBook.name} />
+            <div className="bookname">6위       {sixTopReviewedBook.name}</div>
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="bookslide"> 
+        <div>a</div>
         </SwiperSlide>
         </Swiper>
     </div>
