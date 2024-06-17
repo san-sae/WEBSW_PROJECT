@@ -35,17 +35,16 @@
 1. 리포지토리를 클론합니다: 
     ```
     git clone https://github.com/san-sae/WEBSW_PROJECT.git
-    cd WEBSW_PROJECT
     ```
 1. 의존성을 설치합니다.
     ```
+    cd WEBSW_PROJECT/react_project
     npm install
     ```
 ### 실행 방법
 1. 개발 서버를 시작합니다: 
     ```
-    $ cd react_project
-    $ npm start
+    npm start
     ```
 
 ### 실행화면
