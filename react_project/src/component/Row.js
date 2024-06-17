@@ -12,8 +12,7 @@ import './Row.css';
 
 const Row = () => {
   return (
-    <div>
-      <div className="n">화제의 책들</div>
+    <div className='row-container'>
       <div className="row">
         <Swiper
         modules={[Navigation]}

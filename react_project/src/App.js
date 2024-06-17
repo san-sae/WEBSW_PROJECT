@@ -20,7 +20,7 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/question" element={<Question />} />
-        <Route path="/review" element={<Review />} />
+        <Route path="/review/:isbn" element={<Review />} />
         <Route path="/signin" element={<Signin />} />
       </Routes>
     </BrowserRouter> 

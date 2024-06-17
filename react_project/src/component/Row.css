@@ -1,35 +1,33 @@
-.row {
-  position: absolute;
-  top: 205px;
-  left: 0px;
-  right: 0px;
-  height: 400px;
-  width:100%;
-  background-color: #3F72AF;
-}
-
-.n {
-  position: absolute;
-  top: 170px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  font-size: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: #1755a1;
-  color: white;
+.row-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.row {
+  position: relative;
+  top: 200px;
+  border-radius: 30px;
+  height: 400px;
+  width: 1400px;
+  display: flex;
+  align-items: center;
+  background-color: #7AB2B2;
+  color:#EEF7FF;
+}
+
+.review_content{
+  display: flex;
+  flex-direction: column;
 }
 
 .swiper-button-next {
-  color: white;
-
+  color: #EEF7FF;
 }
 
 .swiper-button-prev {
-  color: white;
+  color: #EEF7FF;
 }
 
 .bookslide {
@@ -49,13 +47,11 @@
 }
 
 .bookname {
-  color: #DBE2EF;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
 .author {
-  color: #DBE2EF;
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -63,7 +59,6 @@
 
 
 .intro {
-  color: #DBE2EF;
   font-size: 15px;
   margin-bottom: 20px;
 }

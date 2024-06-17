@@ -1,91 +1,232 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Review.css';
+import { useNavigate } from "react-router-dom";
+
+
+import Header from '../component/Header';
+import Nav from '../component/Nav';
+
+import { useParams } from 'react-router-dom';
+
+export const mockBook = [
+  {
+      isbn: 9788932473901,
+      name: "이기적 유전자",
+      author: "리처드 도킨스",
+      publisher: "을유문화사",
+      date: "2018-10-20",
+      pages: 632,
+      genre: "과학",
+      img: "img/selfishGene.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0 
+  },
+  {
+      isbn: 9788957365793,
+      name: "EBS 다큐프라임 자본주의",
+      author: "EBS 자본주의 제작팀",
+      publisher: "가나출판사",
+      date: "2013-09-27",
+      pages: 388,
+      genre: "경제",
+      img: "img/ebsCapitalism.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9788936434120,
+      name: "소년이 온다",
+      author: "한강",
+      publisher: "창비",
+      date: "2024-05-10",
+      pages: 284,
+      genre: "소설",
+      img: "img/humanActs.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9791187142560,
+      name: "인관관계론",
+      author: "데일 카네기",
+      publisher: "현대지성",
+      date: "2019-10-07",
+      pages: 352,
+      genre: "자기계발",
+      img: "img/influencePeople.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9791190313186,
+      name: "지적 대화를 위한 넓고 얕은 지식1",
+      author: "채사장",
+      publisher: "웨일북",
+      date: "2020-02-01",
+      pages: 388,
+      genre: "인문학",
+      img: "img/humanities.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9788983711892,
+      name: "코스모스",
+      author: "칼 세이건",
+      publisher: "사이언스북스",
+      date: "2006-12-20",
+      pages: 719,
+      genre: "과학",
+      img: "img/cosmos.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9788936811549,
+      name: "죽음의 수용소에서",
+      author: "빅터 프랭클",
+      publisher: "청아출판사",
+      date: "2020-05-30",
+      pages: 224,
+      genre: "인문학",
+      img: "img/searchForMeaning.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+  {
+      isbn: 9788937460449,
+      name: "데미안",
+      author: "헤르만 헤세",
+      publisher: "민음사",
+      date: "2000-12-20",
+      pages: 239,
+      genre: "소설",
+      img: "img/demian.png",
+      issueNum: 0,
+      rating: 0,
+      level: 0,
+      complete: 0
+  },
+];
+
 
 function Review() {
-  const [bookName, setBookName] = useState('');
-  const [rating, setRating] = useState(0);
-  const [level, setLevel] = useState(0);
-  const [complete, setComplete] = useState(0);
-  const [reviewText, setReviewText] = useState('');
+  const { isbn } = useParams();
+
   const [reviewDate, setReviewDate] = useState(new Date().toISOString().slice(0, 10));
+  //const navigate = useNavigate();
 
-  const handleBookNameChange = (event) => {
-    setBookName(event.target.value);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const handleRatingChange = (event) => {;
-    setRating(parseInt(event.target.value));
-  };
+    const selectRating = document.getElementById("review-eval");
+    const selectLevel = document.getElementById("review-level");
+    const selectComplete = document.getElementById("review-complete");
 
-  const handleLevelChange = (event) => {
-    setLevel(parseInt(event.target.value));
-  };
+    const selectRatingValue = selectRating.value;
+    const selectLevelValue = selectLevel.value;
+    const selectCompleteValue = selectComplete.value;
 
-  const handleCompleteChange = (event) => {
-    setComplete(parseInt(event.target.value));
-  };
+    const updatedBooks = [...mockBook];
 
-  const handleReviewTextChange = (event) => {
-    setReviewText(event.target.value);
-  };
+    const bookIndex = updatedBooks.findIndex(book => book.isbn === parseInt(isbn));
+    //navigate("/booklist");
 
-  const handleSubmitReview = (event) => {
-    event.preventDefault();
-    console.log('Submitted Review:', { bookName, rating, reviewText, reviewDate });
-    // 여기에서 실제로 서버에 리뷰를 전송하는 등의 작업을 수행할 수 있습니다.
-    // 서버에 리뷰를 저장하고 성공적으로 저장되었음을 사용자에게 알릴 수 있습니다.
-  };
+    
+    if(bookIndex !== -1) {
+      // 별점 적용 전
+      console.log(updatedBooks[bookIndex].issueNum);
+      console.log(updatedBooks[bookIndex].rating);
+      console.log(selectRatingValue);
+
+      updatedBooks[bookIndex].rating = ((updatedBooks[bookIndex].rating * updatedBooks[bookIndex].issueNum) + selectRatingValue) / (updatedBooks[bookIndex].issueNum + 1);
+      updatedBooks[bookIndex].level = ((updatedBooks[bookIndex].level * updatedBooks[bookIndex].issueNum) + selectLevelValue) / (updatedBooks[bookIndex].issueNum + 1);
+      updatedBooks[bookIndex].complete = ((updatedBooks[bookIndex].complete * updatedBooks[bookIndex].issueNum) + selectCompleteValue) / (updatedBooks[bookIndex].issueNum + 1);
+
+      updatedBooks[bookIndex].issueNum += 1;
+
+      // 별점 적용 후
+      console.log(updatedBooks[bookIndex].issueNum);
+      console.log(updatedBooks[bookIndex].rating);
+      console.log(selectRatingValue);
+      //console.log(updatedBooks);
+    }
+    
+  }
 
   return (
     <div className="review-page">
-      <h1>리뷰 작성 페이지</h1>
-      <form className="review-form" onSubmit={handleSubmitReview}>
-        <div className="review-name">
-          <label>책 제목:</label>
-          <input type="text" value={bookName} onChange={handleBookNameChange} />
-          <label>리뷰 작성 날짜:</label>
-          <input type="date" value={reviewDate} readOnly />
-        </div>
-        <div className="review-group">
-          <div className="review-eval">
-            <label>별점:</label>
-            <select value={rating} onChange={(e) => setRating(parseInt(e.target.value))}>
+      <Header></Header>
+      <Nav></Nav>
+      <div className='write-review'>
+        <h2>리뷰 작성 페이지</h2>
+        <form className="review-form">
+          <div className="review-name">
+            <input className='name' type="text" value={isbn}  />
+            <input className='date' type="date" value={reviewDate} readOnly />
+          </div>
+          <div className="review-group">
+            <select
+              id="review-eval"
+              name='review-eval' 
+              required
+            >
+              <option value="" disabled selected>별점</option>
               <option value="5">5점</option>
               <option value="4">4점</option>
               <option value="3">3점</option>
               <option value="2">2점</option>
               <option value="1">1점</option>
             </select>
-          </div>
-          <div className="review-level">
-            <label>난이도:</label>
-            <select value={level} onChange={(e) => setLevel(parseInt(e.target.value))}>
+            <select
+              id="review-level" 
+              name="review-level"
+              required  
+            >
+              <option value="" disabled selected>난이도</option>
               <option value="5">매우 높음</option>
               <option value="4">높음</option>
               <option value="3">중간</option>
               <option value="2">낮음</option>
               <option value="1">매우 낮음</option>
             </select>
-          </div>
-          <div className="review-complete">
-            <label>완독 시간:</label>
-            <select value={complete} onChange={(e) => setComplete(parseInt(e.target.value))}>
-              <option value="1">1일</option>
+            <select
+              id="review-complete" 
+              name='review-complete'
+              required
+            >
+              <option value="" disabled selected>완독 시간</option>
+              <option value="1">1일 이하</option>
               <option value="2">2~4일</option>
               <option value="3">5~7일</option>
               <option value="4">1~2주</option>
               <option value="5">3주 이상</option>
             </select>
           </div>
-        </div>
-        <div className="review-content">
-          <label>리뷰 내용:</label>
-          <textarea value={reviewText} onChange={handleReviewTextChange} />
-        </div>
-        <div className="submit-btn">
-          <button type="submit">리뷰 작성 완료</button>
-        </div>
-      </form>
+          <div className="review-content">
+            <textarea 
+              placeholder="리뷰를 작성하시오..."
+            />
+              </div>
+          <div className="submit-btn">
+            <button onClick={handleSubmit} type="submit">리뷰 제출</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

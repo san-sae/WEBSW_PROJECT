@@ -52,7 +52,6 @@ const Signin = () => {
     };
 
     return (
-        <div className="all">
             <div className="signin-container">
                 <form className="c" onSubmit={handleSubmit}>
                     <h2 className="b">회원가입</h2>
@@ -101,7 +100,6 @@ const Signin = () => {
                 </form>
                 
             </div>
-        </div>
     );
 };
 
