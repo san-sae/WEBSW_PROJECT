@@ -72,18 +72,28 @@ select option[value=""][disabled] {
     margin: 30px auto 20px auto;
   }
   
-button {
+.review-submit-btn {
   width: 90px;
   height: 50px;
   border: none;
-  background-color: #112D4E;
+  background-color:  #7AB2B2;
   font-size: 15px;
-  color: white;
+  color: #EEF7FF;
   margin: 30px auto; /* 수평 가운데 정렬 */
   display: block; /* 블록 요소로 변경하여 너비를 가득 차게 설정 */
   border-radius: 10px;
 }
 
+.review-submit-btn:hover {
+  background-color: #112D4E;
+}
+
 .submit-btn {
   text-align: center; /* 내부의 인라인 요소들을 수평 가운데 정렬 */
+}
+
+
+
+#review-eval, #review-level, #review-complete {
+  border-radius: 8px;
 }

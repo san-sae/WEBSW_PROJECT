@@ -128,7 +128,15 @@ function Review() {
   const { addReview } = useContext(ReviewContext);
   const [reviewDate, setReviewDate] = useState(new Date().toISOString().slice(0, 10));
   const [reviewContent, setReviewContent] = useState("");
-  
+  const [bookTitle, setBookTitle] = useState("");
+
+  useEffect(() => {
+    const book = mockBook.find(book => book.isbn === parseInt(isbn));
+    if (book) {
+      setBookTitle(book.name);
+    }
+  }, [isbn]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -139,6 +147,40 @@ function Review() {
     const selectRatingValue = selectRating.value;
     const selectLevelValue = selectLevel.value;
     const selectCompleteValue = selectComplete.value;
+
+    let isValid = true;
+
+    if (!selectRatingValue) {
+      selectRating.style.border = "2px solid red";
+      isValid = false;
+    } else {
+      selectRating.style.border = "";
+    }
+
+    if (!selectLevelValue) {
+      selectLevel.style.border = "2px solid red";
+      isValid = false;
+    } else {
+      selectLevel.style.border = "";
+    }
+  
+    if (!selectCompleteValue) {
+      selectComplete.style.border = "2px solid red";
+      isValid = false;
+    } else {
+      selectComplete.style.border = "";
+    }
+
+    if (!reviewContent) {
+      document.getElementById("review-content").style.border = "2px solid red";
+      isValid = false;
+    } else {
+      document.getElementById("review-content").style.border = "";
+    }
+  
+    if (!isValid) {
+      return;
+    }
 
     const updatedBooks = [...mockBook];
 
@@ -161,7 +203,14 @@ function Review() {
       };
 
       addReview(review);
-      // 별점 적용 전
+
+      setReviewContent("");
+      selectRating.value = "";
+      selectLevel.value = "";
+      selectComplete.value = "";
+
+      alert("리뷰 제출이 완료되었습니다.");
+
     }
   }
 
@@ -173,7 +222,7 @@ function Review() {
         <h2>리뷰 작성 페이지</h2>
         <form className="review-form">
           <div className="review-name">
-            <input className='name' type="text" value={isbn}  />
+            <input className='name' type="text" value={bookTitle} readOnly />
             <input className='date' type="date" value={reviewDate} readOnly />
           </div>
           <div className="review-group">
@@ -216,6 +265,7 @@ function Review() {
           </div>
           <div className="review-content">
             <textarea 
+              id="review-content" 
               placeholder="리뷰를 작성하시오..."
               value={reviewContent}
               onChange={(e) => setReviewContent(e.target.value)}
@@ -223,7 +273,7 @@ function Review() {
             />
               </div>
           <div className="submit-btn">
-            <button onClick={handleSubmit} type="submit">리뷰 제출</button>
+            <button className='review-submit-btn' onClick={handleSubmit} type="submit">리뷰 제출</button>
           </div>
         </form>
       </div>
