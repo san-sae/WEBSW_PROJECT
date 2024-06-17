@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     from: mail, // 사용자가 입력한 이메일
     to: 'choi.yoo.lim.12@gmail.com', // 받는 사람 이메일
     subject: subject, // 입력받은 제목
-    text: `메일주소 : ${mail}\n문의 내용 : ${question}` // 입력받은 내용
+    text: `메일주소 : ${mail}\n제목 : ${subject}\n문의 내용 : ${question}` // 입력받은 내용
   };
   // 닉네임 : ${nickname}\n
 
