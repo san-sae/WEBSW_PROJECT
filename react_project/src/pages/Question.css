@@ -1,11 +1,11 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
   background-color: #EEF7FF;
-}
+} */
 
-.container {
+.ques {
   /* position: relative; */
   max-width: 800px;
   margin: 150px auto;
@@ -17,9 +17,9 @@ body {
 }
 
 
-h1, h2, h3 {
+/* h1, h2, h3 {
   color: #333;
-}
+} */
 
 form div {
   margin-bottom: 15px;
@@ -32,17 +32,16 @@ label {
   color: grey;
 }
 
-input[type="text"],
-input[type="email"]
+.theinput
 {
-  width: 100%;
+  width: 600px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: horizontal; 
 }
 
-textarea {
+.thecontext {
   width: 600px;
   padding: 10px;
   height: 200px;
@@ -50,6 +49,10 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box; 
   resize: horizontal;
+}
+
+#send_button{
+  margin-left: 240px;
 }
 
 #send_button {
