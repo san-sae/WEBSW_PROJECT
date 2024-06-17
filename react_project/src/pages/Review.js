@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Review.css';
 
 import Header from '../component/Header';
 import Nav from '../component/Nav';
 
 import { useParams } from 'react-router-dom';
+import { ReviewContext } from '../component/ReviewContext';
 
 export const mockBook = [
   {
@@ -124,9 +125,10 @@ export const mockBook = [
 
 function Review() {
   const { isbn } = useParams();
-
+  const { addReview } = useContext(ReviewContext);
   const [reviewDate, setReviewDate] = useState(new Date().toISOString().slice(0, 10));
-
+  const [reviewContent, setReviewContent] = useState("");
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -143,22 +145,23 @@ function Review() {
     const bookIndex = updatedBooks.findIndex(book => book.isbn === parseInt(isbn));
 
     if(bookIndex !== -1) {
+      const book = updatedBooks[bookIndex];
+      book.rating = ((book.rating * book.issueNum) + selectRating) / (book.issueNum + 1);
+      book.level = ((book.level * book.issueNum) + selectLevelValue) / (book.issueNum + 1);
+      book.complete = ((book.complete * book.issueNum) + selectCompleteValue) / (book.issueNum + 1);
+      book.issueNum += 1;
+
+      const review = {
+        book,
+        reviewDate,
+        rating: selectRatingValue,
+        level: selectLevelValue,
+        complete: selectCompleteValue,
+        content: reviewContent,
+      };
+
+      addReview(review);
       // 별점 적용 전
-      console.log(updatedBooks[bookIndex].issueNum);
-      console.log(updatedBooks[bookIndex].rating);
-      console.log(selectRatingValue);
-
-      updatedBooks[bookIndex].rating = ((updatedBooks[bookIndex].rating * updatedBooks[bookIndex].issueNum) + selectRatingValue) / (updatedBooks[bookIndex].issueNum + 1);
-      updatedBooks[bookIndex].level = ((updatedBooks[bookIndex].level * updatedBooks[bookIndex].issueNum) + selectLevelValue) / (updatedBooks[bookIndex].issueNum + 1);
-      updatedBooks[bookIndex].complete = ((updatedBooks[bookIndex].complete * updatedBooks[bookIndex].issueNum) + selectCompleteValue) / (updatedBooks[bookIndex].issueNum + 1);
-
-      updatedBooks[bookIndex].issueNum += 1;
-
-      // 별점 적용 후
-      console.log(updatedBooks[bookIndex].issueNum);
-      console.log(updatedBooks[bookIndex].rating);
-      console.log(selectRatingValue);
-      //console.log(updatedBooks);
     }
   }
 
@@ -214,6 +217,9 @@ function Review() {
           <div className="review-content">
             <textarea 
               placeholder="리뷰를 작성하시오..."
+              value={reviewContent}
+              onChange={(e) => setReviewContent(e.target.value)}
+              required
             />
               </div>
           <div className="submit-btn">
