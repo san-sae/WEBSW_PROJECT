@@ -8,18 +8,29 @@
   width: 100%;
 }
 
-.m {
+.logo {
   display: block;
   max-width: 100px;
   max-height: 100px;
   margin: auto;
+  font-style: oblique;
+  font-size: 30px;
+  font-weight: bold;
+  color: #4D869C;
 }
 
 .logout {
-  color: #112D4E;
+  color: #4D869C;
   font-size: 15px;
+  background-color: #CDE8E5;
+  font-weight: 600;
   position: absolute;
   top: 15px;
   right: 200px;
+  border-radius: 15px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   
 }

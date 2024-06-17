@@ -1,67 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/swiper-bundle.css';
-
+import React, { useState, useEffect } from 'react';
 import './Row.css'; 
 
-const Row = () => {
+function Row() {
+
   return (
-    <div>
-      <div className="n">화제의 책들</div>
-      <div className="row">
-        <Swiper
-        modules={[Navigation]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation={{ clickable: true }}>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">나의 채식 테이블</div>
-            <div className="author">홀썸모먼트 저</div>
-            <div className="intro">배달 어플, 외식, 밀키트까지 직접 차리는 집밥을 방해하는 요소는 정말 많습니다. 그래서 우리는 어느새 집밥이 번거롭고 귀찮은 일이라 생각하게 되었습니다. 하지만 때우듯 처리하는 한 끼로 우리는 생각보다 많은 것을 잃고 있습니다. 그중 누가 뭐래도 가장 큰 손실은 바로 건강이지요.</div>
-          </div> 
-          <img src="./images/book.png" alt="book1" />
-        </SwiperSlide>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">나의 채식 테이블</div>
-            <div className="author">홀썸모먼트 저</div>
-            <div className="intro">배달 어플, 외식, 밀키트까지 직접 차리는 집밥을 방해하는 요소는 정말 많습니다. 그래서 우리는 어느새 집밥이 번거롭고 귀찮은 일이라 생각하게 되었습니다. 하지만 때우듯 처리하는 한 끼로 우리는 생각보다 많은 것을 잃고 있습니다. 그중 누가 뭐래도 가장 큰 손실은 바로 건강이지요.</div>
-          </div> 
-          <img src="./images/book.png" alt="book2" />
-        </SwiperSlide>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">나의 채식 테이블</div>
-            <div className="author">홀썸모먼트 저</div>
-            <div className="intro">배달 어플, 외식, 밀키트까지 직접 차리는 집밥을 방해하는 요소는 정말 많습니다. 그래서 우리는 어느새 집밥이 번거롭고 귀찮은 일이라 생각하게 되었습니다. 하지만 때우듯 처리하는 한 끼로 우리는 생각보다 많은 것을 잃고 있습니다. 그중 누가 뭐래도 가장 큰 손실은 바로 건강이지요.</div>
-          </div> 
-          <img src="./images/book.png" alt="book3" />
-        </SwiperSlide>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">나의 채식 테이블</div>
-            <div className="author">홀썸모먼트 저</div>
-            <div className="intro">배달 어플, 외식, 밀키트까지 직접 차리는 집밥을 방해하는 요소는 정말 많습니다. 그래서 우리는 어느새 집밥이 번거롭고 귀찮은 일이라 생각하게 되었습니다. 하지만 때우듯 처리하는 한 끼로 우리는 생각보다 많은 것을 잃고 있습니다. 그중 누가 뭐래도 가장 큰 손실은 바로 건강이지요.</div>
-          </div> 
-          <img src="./images/book.png" alt="book4" />
-        </SwiperSlide>
-        <SwiperSlide className="bookslide"> 
-          <div className="book">
-            <div className="bookname">나의 채식 테이블</div>
-            <div className="author">홀썸모먼트 저</div>
-            <div className="intro">배달 어플, 외식, 밀키트까지 직접 차리는 집밥을 방해하는 요소는 정말 많습니다. 그래서 우리는 어느새 집밥이 번거롭고 귀찮은 일이라 생각하게 되었습니다. 하지만 때우듯 처리하는 한 끼로 우리는 생각보다 많은 것을 잃고 있습니다. 그중 누가 뭐래도 가장 큰 손실은 바로 건강이지요.</div>
-          </div> 
-          <img src="./images/book.png" alt="book5" />
-        </SwiperSlide>
-      </Swiper>
+    <div className='review-container'>
+      <div className='review'>
+        <div className='review-h1'>독서의 즐거움을 두배로, 당신의 책 플랫폼 BOOKLOG</div>
+        <div className='review-h2'>원하는 책을 찾고, 솔직한 리뷰를 남겨보세요!</div>
+        <div className='review-p'>독서의 즐거움을 나누는 공간에 오신 것을 환영합니다! <br/>이곳에선 다양한 책 추천을 받고, 직접 읽은 책에 대한 솔직한 리뷰를 작성할 수 있습니다.
+          <br/>독자들의 생생한 평가를 통해 다음에 읽을 책을 쉽게 선택해 보세요.</div>
+      </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default Row
-
+export default Row;

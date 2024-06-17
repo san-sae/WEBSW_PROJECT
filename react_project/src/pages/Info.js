@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from '../component/Header';
 import Nav from './../component/Nav';
 import './Info.css';
 
 const Info = () => {
   return (
     <div className="container">
+      <Header />
       <Nav />
       <h1>독립 출판사란?</h1>
       <p>

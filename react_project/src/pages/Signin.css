@@ -1,6 +1,6 @@
 
 .signin-container{
-  background-color: #3F72AF;
+  background-color: #7AB2B2;
   height: 100vh;
   display:flex;
   justify-content: center;
@@ -10,15 +10,15 @@
   width: 300px;
   height: 500px;
   position: absolute;
-  top: 50px;
+  top: 60px;
 }
 
 .signupButton{
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: white;
-  color: #112D4E;
+  background-color: #EEF7FF;
+  color: #4D869C;
   font-size: 17px;
   border: none;
   border-radius: 4px;
@@ -26,11 +26,11 @@
 }
 
 button:hover {
-  background-color: #112D4E;
-  color: #F9F7F7;
+  background-color: #4D869C;
+  color: #EEF7FF;
 }
 
 .error {
-  color:#f9f7f7;
+  color:#EEF7FF;
   font-size: 17px;
 }
