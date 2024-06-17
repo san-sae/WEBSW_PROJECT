@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Question.css';
 import Nav from './../component/Nav';
+import Header from '../component/Header';
 
 // const MyPage = () => {
 //   const id = localStorage.getItem('id');
@@ -50,6 +51,7 @@ const ContactForm = () => {
 
   return (
     <div className="container">
+      <Header />
       <Nav />
       <h1>문의하기</h1>
       <form onSubmit={handleSubmit}>
