@@ -10,12 +10,28 @@
   /* position: relative; */
   max-width: 800px;
   margin: 150px auto;
-  height: 2000px;
+  height: 2050px;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* .about, .pros, .charac {
+  background-color: #447082;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about h1, .pros h2, .charac h2 {
+  color: #ffffff;
+}
+
+.about p, .pros p, .charac p {
+  color: #ffffff;
+} */
+
 
 nav ul {
   list-style-type: none;
@@ -38,10 +54,10 @@ nav ul li a:hover {
 }
 
 
-p {
+/* p {
   line-height: 1.6;
   color: #666;
-}
+} */
 
 form div {
   margin-bottom: 15px;
