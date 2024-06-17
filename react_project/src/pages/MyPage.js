@@ -57,7 +57,7 @@ const MyPage = () => {
                     </div>
                 ) : (
                     <div>
-                        <h2>사용자 정보 (임시)</h2>
+                        <h2>사용자 정보</h2>
                         <div className="data-group">
                             <p><strong>사용자 이름:</strong> {username}</p>
                             <p><strong>ID:</strong> {id}</p>
