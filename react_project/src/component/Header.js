@@ -1,26 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import './Header.css'; 
 
-
 const Header = () => {
-  
   const navigate = useNavigate();
-  
-  const goToMain = () => {
-  navigate("/main");
+
+  const goToHome = () => {
+    navigate("/home");
+    };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    navigate("/");
   };
 
-  const goToLogin = () => {
-    navigate("/");
-    };
+
 
   return (
     <div className="head">
-      <div className="logout" onClick={goToLogin}>로그아웃</div>  
-      <img className="m" src="./images/book.png" alt="logo-one" onClick={goToMain}/>
+      <div type="submit" className="logout" onClick={handleSubmit}>로그아웃</div> 
+      <div onClick={goToHome} className="logo">BOOKLOG</div>   
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

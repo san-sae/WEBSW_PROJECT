@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from '../component/Header';
 import Nav from './../component/Nav';
 import './Info.css';
 
 const Info = () => {
   return (
     <div className="info">
+      <Header />
       <Nav />
       <div className="main_content">
         <div className="about">

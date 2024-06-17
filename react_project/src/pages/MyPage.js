@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
-import Nav from './../component/Nav';
+import Nav from './../component/Nav'
+import Header from '../component/Header';
 import { ReviewContext } from '../component/ReviewContext';
 import './MyPage.css';
 
@@ -32,6 +33,7 @@ const MyPage = () => {
 
     return (
         <div className="display-container">
+            <Header />
             <Nav />
             <br />
             <div id="main_content">

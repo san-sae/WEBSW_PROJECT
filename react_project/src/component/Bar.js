@@ -11,7 +11,7 @@ const Bar = () => {
 
   return (
     <div className="bar">
-      <img className="l" src="./images/book.png" alt="logo-one" onClick={goToMain}/>
+      <div className="l" >BOOKLOG</div>
       <div className='x'>
         <div className="t">BOOKLOG</div>
         <div className="e">

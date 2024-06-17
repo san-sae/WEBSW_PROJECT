@@ -10,12 +10,13 @@ import './Home.css';
 const Home = () => {
     
     return (
-        <div className='container'>
+        <div className='contain'>
             <Nav></Nav>
             <Bar></Bar>
+            <Review></Review>
             <Row></Row>
             <Header></Header>
-            <Review></Review>
+            
         </div>
     );
 };

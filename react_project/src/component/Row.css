@@ -1,77 +1,69 @@
-.row {
-  position: absolute;
-  top: 205px;
-  left: 0px;
-  right: 0px;
-  height: 400px;
-  width:100%;
-  background-color: #3F72AF;
-}
-
-.n {
-  position: absolute;
-  top: 170px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  font-size: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: #1755a1;
-  color: white;
+.review-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
-.swiper-button-next {
-  color: white;
-
-}
-
-.swiper-button-prev {
-  color: white;
-}
-
-.bookslide {
-  display: flex;
-  flex-direction: row;
+.review {
+  position: absolute;
+  top: 230px;
   height: 400px;
-}
-
-.book {
-  width: 50%;
-  display:flex;
+  width: 1200px;
+  border-radius: 30px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 100px;
-  padding-right: 50px;
-  
+  padding-right: 100px;
+  background-color: #7AB2B2;
 }
 
-.bookname {
-  color: #DBE2EF;
+.review-h1{
+  color:#EEF7FF;
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 30px;
+
+}
+
+.review-h2{
+  color:#EEF7FF;
   font-size: 30px;
-  margin-bottom: 20px;
+  font-weight:600;
+  padding-bottom: 30px;
 }
 
-.author {
-  color: #DBE2EF;
+.review-p{
+  color:#EEF7FF;
   font-size: 20px;
-  margin-bottom: 20px;
+
 }
 
-
-
-.intro {
-  color: #DBE2EF;
-  font-size: 15px;
-  margin-bottom: 20px;
+.review-li {
+  list-style-type: none;
+  display: flex; 
+  align-items: center;
+  padding-left: 0px;
+  padding-bottom: 100px; 
+  margin: 0; 
+  margin-top: 50px;
+  font-size: 30px;
+  border-bottom: 3px solid #EEF7FF ;
+  }
+  
+  .review-li-content {
+  margin-right: 100px;
+  width: 500px;
+  text-align: left;
 }
 
-img {
-  width: 50%;
-  display: block;
-  max-width: 200px;
-  max-height: 200px;
-  margin: auto; /* 이미지가 부모 요소 안에서 가운데로 정렬되도록 설정 */
+.review-li-img img{
+  max-height: 600px;
 }
+
+.review_title{
+  font-size: 40px;
+
+}
+

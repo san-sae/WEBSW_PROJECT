@@ -48,10 +48,10 @@ const LogIn = () => {
     };
 
     return (
-        <div className="body">
+        <div className="LogIn-container">
             <div className="book-container">
-                <h1 className="a">Book</h1>
-                <img className="i" src="./images/book.png" alt="logo-one" />
+                <h1 className="login-title">BOOKLOG</h1>
+                <p className='login-text'>독서의 즐거움을 두 배로, 당신의 책 리뷰 플랫폼</p>
             </div>
             <div className="login-container">
                 <form onSubmit={handleSubmit}>

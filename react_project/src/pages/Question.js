@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Question.css';
 import Nav from './../component/Nav';
+import Header from '../component/Header';
 
 // const MyPage = () => {
 //   const id = localStorage.getItem('id');
@@ -50,6 +51,7 @@ const ContactForm = () => {
 
   return (
     <div className="ques">
+      <Header />
       <Nav />
       <h1>문의하기</h1>
       <form onSubmit={handleSubmit}>
@@ -59,15 +61,15 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="mail">이메일</label>
-          <input type="email" id="mail" name="mail" value={formData.mail} onChange={handleChange} required />
+          <input type="email" id="mail" className='theinput' name="mail" value={formData.mail} onChange={handleChange} required />
         </div>
         <div>
           <label htmlFor="subject">제목</label>
-          <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
+          <input type="text" id="subject" className='theinput' name="subject" value={formData.subject} onChange={handleChange} required />
         </div>
         <div>
           <label htmlFor="question">문의 내용</label>
-          <textarea id="question" name="question" value={formData.question} onChange={handleChange} required></textarea>
+          <textarea id="question" name="question" className='thecontext' value={formData.question} onChange={handleChange} required></textarea>
         </div>
         <br></br>
         <button type="submit" id="send_button" disabled={loading}>
