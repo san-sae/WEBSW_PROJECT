@@ -41,12 +41,23 @@
     cd WEBSW_PROJECT/react_project
     npm install
     ```
-### 실행 방법
-1. 개발 서버를 시작합니다: 
+1. 서버 관련 의존성 설치합니다.
     ```
+    cd WEBSW_PROJECT/react_project/backend
+    npm install axios
+    npm install nodemailer
+    ```
+### 실행 방법
+1. 웹을 시작합니다: 
+    ```
+    cd WEBSW_PROJECT/react_project
     npm start
     ```
-
+1. 새로운 터미널로 서버를 시작합니다.(문의를 메일로 받고 싶을 때)
+   ```
+   cd WEBSW_PROJECT/react_project/backend
+   node app.js
+   ```
 ### 실행화면
 
 
