@@ -31,33 +31,30 @@
 완전한 의존성 목록은 리포지토리 내 react_project 디렉토리에 있는 `package.json` 파일을 참조하세요.
 
 
-### 설치 방법
-1. 리포지토리를 클론합니다: 
-    ```
-    git clone https://github.com/san-sae/WEBSW_PROJECT.git
-    ```
-1. 의존성을 설치합니다.
-    ```
-    cd WEBSW_PROJECT/react_project
-    npm install
-    ```
-1. 서버 관련 의존성 설치합니다.
-    ```
-    cd WEBSW_PROJECT/react_project/backend
-    npm install axios
-    npm install nodemailer
-    ```
-### 실행 방법
-1. 웹을 시작합니다: 
-    ```
-    cd WEBSW_PROJECT/react_project
-    npm start
-    ```
-1. 새로운 터미널로 서버를 시작합니다.(문의를 메일로 받고 싶을 때)
-   ```
-   cd WEBSW_PROJECT/react_project/backend
-   node app.js
-   ```
+### 설치 및 실행 방법
+- 웹 서비스
+    1. 레포지토리 클론 및 웹 서비스 관련 의존성 설치 
+        ```
+        git clone https://github.com/san-sae/WEBSW_PROJECT.git
+        cd WEBSW_PROJECT/react_project
+        npm install
+        ```
+    1. 웹 서비스 실행
+        ```
+        npm start
+        ```
+- 서버(제출된 문의를 메일로 받고 싶은 경우, 새로운 터미널로 수행)
+    1. 서버 관련 의존성 설치
+        ```
+        cd WEBSW_PROJECT/react_project/backend
+        npm install axios
+        npm install nodemailer
+        ```
+    1. 서버 시작
+       ```
+       node app.js
+       ```
+
 ### 실행화면
 
 
