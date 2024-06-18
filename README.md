@@ -56,6 +56,23 @@
        ```
 
 ### 실행화면
+- 회원가입 창
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/c2d2be6d-5d08-417b-9c67-dba8a5da611e)
+
+- 로그인 창
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/e245a0cb-e00f-43d8-bb09-69e7805f20cf)
+- 홈페이지
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/a5354300-bae9-497d-b851-d5cc395fde27)
+- 도서 목록 페이지
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/044be3af-6f64-4090-be24-93ebd27b9f6c)
+- 리뷰 작성 페이지
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/d03504e6-06da-4b81-9a2c-215f5a831dea)
+- 독립서점 페이지
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/d3eb3628-c552-4d0c-a539-631cd2150c68)
+- 문의 페이지
+  ![image](https://github.com/san-sae/WEBSW_PROJECT/assets/97453758/d88cc462-7e13-42bd-8c1b-27d89b4dd65a)
+
+
 
 
 ### License
